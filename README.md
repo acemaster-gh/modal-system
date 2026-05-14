@@ -15,3 +15,20 @@ https://github.com/acemaster-gh/modal-system
 - HTML
 - CSS 
 - JavaScript (Vanilla)
+
+# ASCII:
+┌─────────────────────────────┐
+│                             │
+│   [Open Modal 1]            │
+│   [Open Modal 2]            │
+│                             │
+│  ╔═══════════════════════╗  │
+│  ║   Modal Title         ║  │
+│  ║                       ║  │
+│  ║  Some content here    ║  │
+│  ║                       ║  │
+│  ║          [Close]      ║  │
+│  ╚═══════════════════════╝  │
+│                             │
+└─────────────────────────────┘
+
