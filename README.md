@@ -6,10 +6,10 @@
 
 
 ## Live Demo
-not-deployed
+https://sunny-cupcake-2309a7.netlify.app
 
 ## Repo
-pending
+https://github.com/acemaster-gh/modal-system
 
 ## Built With
 - HTML
