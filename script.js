@@ -16,9 +16,14 @@ const state = {
 // ── Functions ─────────────────────────────────────────────────────────────────
 function setTheme(theme) {
     state.theme = theme;
+
     document.documentElement.setAttribute('data-theme', theme);
-    DOM.themeToggle.querySelector('.theme-toggle__icon').textContent =
-        theme === 'dark' ? '☀️' : '🌙';
+    
+    const icon = DOM.themeToggle.querySelector('.theme-toggle__icon');
+    
+    icon.src = 
+         theme === 'dark' ? './assets/sun-bright.svg' : './assets/moon.svg';
+
     localStorage.setItem('theme', theme);
 }
 
