@@ -190,7 +190,7 @@ nav ul {
 
     transition: color var(--transition-fast);
 
-    /* position: relative; */
+    position: relative;
 }
 
 .nav-icon {
@@ -200,15 +200,29 @@ nav ul {
     object-fit: contain;
 
     flex-shrink: 0;
+    filter: brightness(0);
+
+    transition: filter 0.3s ease;
 
 }
 
-.nav-icon {
-    filter: brightness(0) saturate(100%) invert(75%) sepia(6%) saturate(1200%) hue-rotate(190deg) brightness(90%) contrast(85%);
+[data-theme="dark"] .nav-icon {
+    filter: brightness(0) invert(1);
 }
+
+
 
 .nav-link:hover {
     color: var(--primary);
+}
+
+.nav-link:hover .nav-icon {
+    filter: brightness(0) saturate(100%) invert(45%) sepia(90%) saturate(1200%) hue-rotate(220deg);
+}
+
+
+.nav-link:hover .nav-icon {
+    filter: brightness(0) saturate(100%) invert(45%) sepia(90%) saturate(1200%) hue-rotate(220deg);
 }
 
 .nav-link::after {
@@ -253,7 +267,7 @@ nav ul {
 
 [data-theme="dark"] .theme-toggle__icon {
     filter:
-        brightness(0) invert(1) contrast(2) drop-shadow(0 0 4px white);
+        brightness(5) invert(1) contrast(2) drop-shadow(0 0 4px white);
 }
 
 main {
@@ -300,6 +314,40 @@ main {
     color: white;
 }
 
+.navbar h1 {
+
+    line-height: 0.9;
+
+    font-weight: 700;
+
+    color: white;
+
+    margin: 0;
+    padding: 0;
+    gap: 0;
+
+}
+
+.wordmark {
+    margin: 0;
+    line-height: 1;
+
+    display: flex;
+    gap: 0.1rem;
+}
+
+.navbar h1 span {
+    letter-spacing: -2px;
+    font-size: clamp(0.5rem, 4vw, 2rem);
+}
+
+.navbar h1 span:nth-child(1) {
+    color: var(--text-main);
+
+}
+
+
+
 .hero-content p {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -317,7 +365,8 @@ main {
 
 @media (max-width: 768px) {
 
-    .nav-text {
+    .nav-text,
+    .logo-icon {
         display: none;
     }
 
@@ -330,6 +379,12 @@ main {
         height: 28px;
     }
 
+}
+
+@media (max-width: 500px) {
+    .nav-logo {
+        gap: 0.2rem;
+    }
 }
 
 /* ── Layout ─────────────────────────────────────────────────────────────────── */
@@ -495,4 +550,29 @@ main {
 
 .justify-center {
     justify-content: center;
+}
+
+/* here are the styles of the dialog box modal1  */
+
+.dialog-box {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+
+
+}
+
+.modal-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.cross {
+    width: 20px;
+    height: 20px;
+    
 }

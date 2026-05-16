@@ -6,6 +6,14 @@
 const DOM = {
     app:         document.getElementById('app'),
     themeToggle: document.getElementById('themeToggle'),
+    modal:       document.querySelector('#sign-in-modal'),
+    openBtn:     document.querySelector('#open-modal-btn'),
+    closeBtn:    document.querySelector('#close-modal-btn'),
+    modal2:      document.querySelector('#password-generator-modal'),
+    openBtn2:    document.querySelector('#open-modal-btn2'),
+    closeBtn2:   document.querySelector('#close-modal-btn2'),
+
+
 };
 
 // ── State ─────────────────────────────────────────────────────────────────────
@@ -31,6 +39,25 @@ function toggleTheme() {
     setTheme(state.theme === 'dark' ? 'light' : 'dark');
 }
 
+function showModal() {
+    DOM.modal.showModal();
+
+}
+
+function closeModal(){
+    DOM.modal.close();
+}
+
+function openModal2(){
+    DOM.modal2.showModal();
+
+}
+
+function closeModal2(){
+    DOM.modal2.close();
+
+}
+
 function init() {
     setTheme(state.theme);
     console.log('modal-system — ready.');
@@ -38,6 +65,11 @@ function init() {
 
 // ── Event Listeners ───────────────────────────────────────────────────────────
 DOM.themeToggle.addEventListener('click', toggleTheme);
+DOM.openBtn.addEventListener('click', showModal);
+DOM.closeBtn.addEventListener('click', closeModal);
+DOM.openBtn2.addEventListener('click', openModal2);
+DOM.closeBtn2.addEventListener('click', closeModal2);
+
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 init();

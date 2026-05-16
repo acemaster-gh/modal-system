@@ -21,21 +21,25 @@
                 <a href="#" class="nav-logo"><img src="./assets/modalsystem.svg" alt="modal_system_svg" srcset=""
                         class="nav-icon logo-icon">
 
-                        <h1><span>Modal</span>
-                            <span class="highlightF">System</span>
-                        </h1>
+                    <h1 class="wordmark"><span>Modal</span>
+                        <span class="highlight">System</span>
+                    </h1>
 
                 </a>
 
-              
+
 
 
                 <!-- navigation links  -->
+
                 <div class="nav-menu">
+
                     <ul class="nav-list">
 
                         <li class="nav-item">
+
                             <a href="#" class="nav-link">
+
                                 <img src="./assets/dashboard.svg" alt="dashboard_svg" class="nav-icon">
 
                                 <span class="nav-text">Dashboard</span>
@@ -84,7 +88,7 @@
 
 
 
-        </button>
+     
     </header>
     <main>
 
@@ -102,15 +106,48 @@
                 <p>Learn how professional UI overlays, dialogs, and interactive systems work.</p>
 
                 <div class="hero-actions">
-                    <button class="btn">Get Started</button>
-                    <button class="btn btn-secondary">Learn More</button>
+                    <button class="btn" id="open-modal-btn">Get Started</button>
+                    <button class="btn btn--secondary">Learn More</button>
                 </div>
             </div>
 
         </section>
 
+        <div class="dialog-container">
+            <dialog id="sign-in-modal" class="dialog-box">
+                <div class="modal-content-wrapper">
+                    <h2>our first modal</h2>
+
+                    <p>this is natively rendered modal using the html5</p>
+
+                    <div class="modal-button-container">
+
+                        <button class="btn" id="open-modal-btn2">Generate Password</button>
+
+                        <button id="close-modal-btn" class="btn"><img src="./assets/cross.svg" alt="close_btn"
+                                class="cross">
+                        <button>
+
+                    </div>
+                </div>
+            </dialog>
+
+            <dialog id="password-generator-modal" class="dialog-box">
+
+                <div class="modal-content-wrapper">
+                    <h2>this is the second modal inside the first one</h2>
+                    <p>this is also natively rendered modal using html5</p>
+
+                    <button id="close-modal-btn2" class="btn"><img src="./assets/cross.svg" alt="close_btn"
+                            class="cross"></button>
+                </div>
+
+            </dialog>
+
+        </div>
 
     </main>
+    
     <footer></footer>
 
 
@@ -119,9 +156,6 @@
 
 
 
-    <main class="container" id="app">
-
-    </main>
 
     <script src="script.js"></script>
 </body>
