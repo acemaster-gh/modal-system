@@ -361,9 +361,10 @@ main {
 
     color: rgba(255, 255, 255, 0.85);
 }
-@media(min-width: 768px){
 
-    .nav-icon{
+@media(min-width: 768px) {
+
+    .nav-icon {
         display: none;
 
     }
@@ -571,6 +572,8 @@ main {
     width: 90%;
     height: 40%;
     max-width: 500px;
+    overflow: hidden;
+
 }
 
 
@@ -651,15 +654,16 @@ main {
 
 
 .dialog-box::backdrop {
-   
+
     background-color: rgba(15, 23, 42, 0.5);
 
-    
+
     backdrop-filter: blur(4px);
 
-     
+
     transition: all var(--transition-normal);
 }
+
 .dialog-box h2 {
     font-family: var(--font-main);
     font-size: var(--fs-xl);
@@ -669,7 +673,7 @@ main {
 
     line-height: 1.2;
     margin-bottom: var(--space-sm);
-    
+
     letter-spacing: -0.02em;
 }
 
@@ -678,10 +682,10 @@ main {
     font-size: var(--fs-md);
     font-weight: var(--fw-normal);
     color: var(--text-secondary);
-   
+
     line-height: var(--line-height);
     margin-bottom: var(--space-lg);
-    
+
     max-width: 40ch;
-   
+
 }
