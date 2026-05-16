@@ -361,7 +361,13 @@ main {
 
     color: rgba(255, 255, 255, 0.85);
 }
+@media(min-width: 768px){
 
+    .nav-icon{
+        display: none;
+
+    }
+}
 
 @media (max-width: 768px) {
 
@@ -581,6 +587,101 @@ main {
     width: 24px;
     height: 24px;
     display: block;
+    object-fit: contain;
+
+    filter: brightness(0.2);
+    transition: filter var(--transition-fast);
 
 
+}
+
+
+.modal-content-wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+#close-modal-btn,
+#close-modal-btn2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+
+    background: transparent;
+    border: none;
+    padding: var(--space-xs);
+    margin: 0;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    box-shadow: none;
+    transform: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background var(--transition-fast);
+
+    color: var(--bg-main);
+}
+
+
+#close-modal-btn:hover .cross,
+#close-modal-btn2:hover .cross {
+    background: var(--bg-input);
+    transform: none;
+    filter: invert(36%) sepia(84%) saturate(4000%) hue-rotate(345deg) brightness(95%) contrast(95%);
+}
+
+[data-theme="dark"] .cross {
+    filter: brightness(0) invert(1);
+
+}
+
+
+[data-theme="dark"] #close-modal-btn:hover .cross,
+[data-theme="dark"] #close-modal-btn2:hover .cross {
+    filter: invert(40%) sepia(70%) saturate(3000%) hue-rotate(345deg) brightness(100%) contrast(100%);
+}
+
+
+.dialog-box::backdrop {
+   
+    background-color: rgba(15, 23, 42, 0.5);
+
+    
+    backdrop-filter: blur(4px);
+
+     
+    transition: all var(--transition-normal);
+}
+.dialog-box h2 {
+    font-family: var(--font-main);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bold);
+
+    color: var(--text-main);
+
+    line-height: 1.2;
+    margin-bottom: var(--space-sm);
+    
+    letter-spacing: -0.02em;
+}
+
+.dialog-box p {
+    font-family: var(--font-main);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-normal);
+    color: var(--text-secondary);
+   
+    line-height: var(--line-height);
+    margin-bottom: var(--space-lg);
+    
+    max-width: 40ch;
+   
 }
