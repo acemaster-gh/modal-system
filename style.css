@@ -561,8 +561,13 @@ main {
     border-radius: var(--radius-lg);
     padding: var(--space-lg);
 
-
+    margin: auto;
+    width: 90%;
+    height: 40%;
+    max-width: 500px;
 }
+
+
 
 .modal-content-wrapper {
     display: flex;
@@ -571,8 +576,11 @@ main {
     flex-direction: column;
     width: 100%;
 }
+
 .cross {
-    width: 20px;
-    height: 20px;
-    
+    width: 24px;
+    height: 24px;
+    display: block;
+
+
 }
