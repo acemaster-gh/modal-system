@@ -63,12 +63,22 @@ function init() {
     console.log('modal-system — ready.');
 }
 
+
+
 // ── Event Listeners ───────────────────────────────────────────────────────────
 DOM.themeToggle.addEventListener('click', toggleTheme);
 DOM.openBtn.addEventListener('click', showModal);
 DOM.closeBtn.addEventListener('click', closeModal);
 DOM.openBtn2.addEventListener('click', openModal2);
 DOM.closeBtn2.addEventListener('click', closeModal2);
+// for closing modals by clicking outside of em.
+DOM.modal.addEventListener('click', (e) => {
+  if (e.target === DOM.modal) DOM.modal.close();
+});
+
+DOM.modal2.addEventListener('click', (e) => {
+  if (e.target === DOM.modal2) DOM.modal2.close();
+});
 
 
 // ── Init ──────────────────────────────────────────────────────────────────────
